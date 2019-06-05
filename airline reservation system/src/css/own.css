@@ -1,0 +1,35 @@
+#img01{
+    height:30px;
+    width:30px;
+    border-radius:5px;
+    background-color:red;
+}
+
+#search-section{
+    background-size:cover;
+    min-height:250px;
+    background-color:#0969a5;
+}
+#search-section .search-inner{
+    padding-top:40px;
+}
+.card-body{
+    background-color:#0969a5;
+}
+.login,.signup{
+    display:none;
+}
+.carousel-item {
+    height: 500px; }
+  
+  .carousel-image-1 {
+    background: url("./src/img/plane6.jpg");
+    background-size: cover; }
+  
+  .carousel-image-2 {
+    background: url("./src/img/plane5.jpg");
+    background-size: cover; }
+  
+  .carousel-image-3 {
+    background: url("./src/img/plane2.jpg");
+    background-size: cover; }

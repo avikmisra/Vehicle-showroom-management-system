@@ -1,0 +1,298 @@
+ <html >
+              <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <link rel="stylesheet" href="css/style.css">
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+                <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+                <style>
+                .head{
+                margin:auto;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                width: 500px;
+                height: 50px;
+                text-align:center;
+            }
+                </style>
+
+
+              </head>
+
+              <body>
+
+
+                    <div class="head"><h1> <span class="strong"></span></h1></div>
+                <div style="padding:0;" align="center" class="login-page">
+                  <img src="img/oms.png"><br><br>
+              <div class="form" >
+
+
+                <form class="login-form" name="frm" action="Logging.php" method="POST">
+                  <input type="text" placeholder="username" name="usrname"/>
+                  <input type="password" placeholder="password" name="password"/>
+                        <button type="submit" onclick="return logincheck()">login</button>
+
+                  <p class="message"> Forgot Password <a href="forgotpass1.php">Click here</a></p> 
+                </form>
+              </div>
+            </div>
+                <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+                 <script type="text/javascript">
+
+                function logincheck()
+                    {
+                    var x = document.frm.usrname.value;
+                    var y = document.frm.password.value;
+                    if(x =="" || x == null){
+                    alert("Enter the Username ");
+                    return false;
+                    }
+                    else if(y=="" || y == null){
+                    alert("Enter the Password ");
+                    return false;
+                    }else{
+                    return true;
+                    }
+                    }
+
+
+
+
+               $('.message a').click(function(){
+               $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+            });  
+                </script> 
+
+
+
+
+              </body>
+                <?php include 'footer1.php';?>
+            </html>
+
+
+            Logging.php
+
+            <!DOCTYPE html>
+            <html >
+              <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <link rel="stylesheet" href="css/style.css">
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+                <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+                <style>
+                .head{
+                margin:auto;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                width: 500px;
+                height: 50px;
+                text-align:center;
+            }
+                </style>
+
+
+              </head>
+
+              <body>
+
+
+                    <div class="head"><h1> <span class="strong"></span></h1></div>
+                <div style="padding:0;" align="center" class="login-page">
+                  <img src="img/oms.png"><br><br>
+              <div class="form" >
+
+
+                <form class="login-form" name="frm" action="Logging.php" method="POST">
+                  <input type="text" placeholder="username" name="usrname"/>
+                  <input type="password" placeholder="password" name="password"/>
+                        <button type="submit" onclick="return logincheck()">login</button>
+
+                  <p class="message"> Forgot Password <a href="forgotpass1.php">Click here</a></p> 
+                </form>
+              </div>
+            </div>
+                <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+                 <script type="text/javascript">
+
+                function logincheck()
+                    {
+                    var x = document.frm.usrname.value;
+                    var y = document.frm.password.value;
+                    if(x =="" || x == null){
+                    alert("Enter the Username ");
+                    return false;
+                    }
+                    else if(y=="" || y == null){
+                    alert("Enter the Password ");
+                    return false;
+                    }else{
+                    return true;
+                    }
+                    }
+
+
+
+
+               $('.message a').click(function(){
+               $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+            });  
+                </script> 
+
+
+
+
+              </body>
+                <?php include 'footer1.php';?>
+            </html>
+
+        Logout.php
+
+        <?php
+
+        include 'header.php';
+        include 'footer.php';
+
+
+
+
+        session_destroy();
+
+        echo "<script>alert('Successfully Logged Out');window.location.href='index.php'</script>";
+
+        ?>
+
+    forgotpass1.php
+
+    <!DOCTYPE html>
+    <html >
+      <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <style>
+        .head{
+        margin:auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 500px;
+        height: 50px;
+        text-align:center;
+    }
+        </style>
+
+
+      </head>
+
+      <body>
+
+
+            <div class="head"><h1> <span class="strong"></span></h1></div>
+        <div style="padding:0;" align="center" class="login-page">
+          <img src="img/oms.png"><br><br>
+      <div class="form" >
+
+
+        <form class="login-form" name="frm" action="validateemail1.php" method="POST">
+          <input type="text" placeholder="Email" name="email"/>
+          <table width="100%">
+             <tr><td align="left">
+                <button type="submit" name="Back" value="Back" onclick="history.go(-1);" >Back</button></td><td>&nbsp </td><td align="left"> <button type="submit" name="submit"  onclick="return logincheck()">Send Email</button></td></tr></table>
+
+        </form>
+      </div>
+    </div>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+         <script type="text/javascript">
+
+        function logincheck()
+            {
+
+            var y = document.frm.email.value;
+             if(y=="" || y == null){
+            alert("Enter the Email ");
+            return false;
+            }else{
+            return true;
+            }
+            }
+
+
+
+
+       $('.message a').click(function(){
+       $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    }); 
+        </script> 
+
+
+
+
+      </body>
+    </html>
+    <?php include 'footer1.php';?>
+
+
+    validateemail1.php
+
+    <?php 
+    include 'dbConfig.php';
+
+
+    if (isset($_POST['submit'])){
+    $email=$_POST['email'];
+
+
+    $n=0;
+
+                    $query=mysqli_query($con,"SELECT * FROM signup where email ='".$email."'");
+
+                    while($row=mysqli_fetch_array($query))
+                    {
+                    $db_email=$row['email'];
+                    if($db_email==$email)
+                    {              
+                    $n++;
+                    $to=$row['email'];
+                    $subject = "Your Password ";
+                    $txtn = '<table align="center" border="0" cellpadding="0" cellspacing="0" width="1000">
+        <tr>
+            <td align="center" bgcolor="#2ce0e8" style="padding: 7px 0 10px 0;background:#f55322 ">
+               <img src="http://saiss.co.in/supreme_oms/img/oms.png" alt="http://saiss.co.in/supreme_oms/index" width="84" height="36" style="display: block;" />
+            </td>
+        </tr>
+        <td bgcolor="#ffffff" style="padding: 20px 0 30px 0"><center>Hi ,'.$row["username"].'<br>
+        Your password is: '.$row["password"].'<br> <a href="http://saiss.co.in/supreme_oms/index.php">Click to Login</a></center>
+        </td>
+        <tr>
+            <td bgcolor="#f55322" style="padding: 25px 0px 18px 23px;color: #fff;font-size: 12px;">
+                &copy; <?php echo  date("Y"); ?> OMS All RIGHTS RESERVED.
+            </td>
+            <td align="right">
+            </td>
+        </tr>
+    </table>';
+
+       $headers  = "MIME-Version: 1.0" . "\r\n";
+          $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+          $headers .= 'From: <OMS>' . "\r\n";
+
+
+                    mail($to,$subject,$txtn,$headers);
+                    echo "<script>alert('We Sent Password To Your Email Address');window.location.href='index.php';</script>";
+                    }
+                    }
+                    if($n==0)
+                    {
+                    echo "<script>alert('Your email  is Not Matching with our database');window.location.href='index.php';</script>";
+                    }
+                    }              
+    ?>
+Logging.php

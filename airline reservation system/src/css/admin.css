@@ -1,0 +1,36 @@
+body{
+    background-color:white;
+  }
+  
+
+  .left_section{
+    background-color:#19357d;
+    min-height: 100vh;
+  }
+  
+  .profile_image{
+    height: 40px;
+  }
+  
+  .sidebar a{
+    color:#FFF;
+  }
+  
+  .sidebar a:hover:not(.active){
+    background-color: #124680;
+  }
+  
+  .sidebar .active{
+    background-color: #0969a5;
+  }
+  .right-section{
+    background-color:#ececec;
+  }
+  /**
+  .right-section .dark-overlay{#ececec
+    background-color:rgba(0,0,0,0.5);
+  }
+  */
+  .card-body{
+    border-radius:4px;
+  }
